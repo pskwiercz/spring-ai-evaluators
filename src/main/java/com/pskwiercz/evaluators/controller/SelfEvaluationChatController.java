@@ -41,7 +41,7 @@ public class SelfEvaluationChatController {
     public String chat(@RequestParam("message") String message) {
         String aiResponse=  chatClient.prompt().user(message)
                 .call().content();
-        validateAnswer(message, "Capital of indis is londod");
+        validateAnswer(message, aiResponse);
         return aiResponse;
     }
 

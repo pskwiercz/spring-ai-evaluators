@@ -140,13 +140,13 @@ class SpringAiEvaluatorsApplicationTests {
                 () -> assertThat(aiResponse).isNotBlank(),
                 () -> assertThat(evaluationResponse.isPass())
                         .withFailMessage("""
-                        ========================================
-                        The response was not considered factually accurate.
-                        Question: %s
-                        Response: %s
-                        Context: %s
-                        ========================================
-                        """, question, aiResponse, retrievedContext)
+                                ========================================
+                                The response was not considered factually accurate.
+                                Question: %s
+                                Response: %s
+                                Context: %s
+                                ========================================
+                                """, question, aiResponse, retrievedContext)
                         .isTrue());
     }
 }
